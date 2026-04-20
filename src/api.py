@@ -55,7 +55,7 @@ class MatchRequest(BaseModel):
     coaching_style_preference: str
     lesson_frequency_intent: str
 
-
+# Coach info
 def get_coach_by_id(coaches_df, coach_id: int):
     matched = coaches_df[coaches_df["id"] == coach_id]
     if matched.empty:
