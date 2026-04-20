@@ -1,0 +1,414 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.hero-banner {
+  background: linear-gradient(135deg, #0f766e, #2563eb);
+  color: white;
+  padding: 42px 24px 56px;
+}
+
+.hero-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  margin: 0 0 10px;
+  font-size: 38px;
+}
+
+.hero-content p {
+  margin: 0;
+  max-width: 850px;
+  line-height: 1.6;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.app-container {
+  max-width: 1100px;
+  margin: -28px auto 0;
+  padding: 0 24px 32px;
+}
+
+.stepper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.step-item {
+  background: white;
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.step-circle {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background: #e5e7eb;
+  color: #374151;
+  flex-shrink: 0;
+}
+
+.step-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.step-item.active {
+  border-color: #93c5fd;
+  background: #eff6ff;
+}
+
+.step-item.active .step-circle {
+  background: #2563eb;
+  color: white;
+}
+
+.step-item.done .step-circle {
+  background: #0f766e;
+  color: white;
+}
+
+.panel {
+  background: white;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+}
+
+.panel h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.section-subtext {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-grid label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.form-grid input,
+.form-grid select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  background: white;
+  color: #111827;
+}
+
+.form-grid input:focus,
+.form-grid select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.primary-button,
+.secondary-button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primary-button {
+  background: #2563eb;
+  color: white;
+}
+
+.primary-button:hover {
+  background: #1d4ed8;
+}
+
+.secondary-button {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.secondary-button:hover {
+  background: #d1d5db;
+}
+
+.summary-hero {
+  background: linear-gradient(135deg, #eff6ff, #ecfeff);
+  border: 1px solid #bfdbfe;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.summary-metric {
+  text-align: center;
+}
+
+.summary-number {
+  display: block;
+  font-size: 42px;
+  font-weight: 800;
+  color: #1d4ed8;
+}
+
+.summary-text {
+  color: #475569;
+  font-weight: 600;
+}
+
+.request-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.preview-card,
+.coach-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.preview-card h4,
+.coach-card h4 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.preview-card p,
+.coach-card p {
+  margin: 6px 0;
+}
+
+.hero-result-card {
+  border-radius: 18px;
+  padding: 20px;
+  background: linear-gradient(180deg, #ffffff, #f8fbff);
+  border: 1px solid #bfdbfe;
+  box-shadow: 0 10px 28px rgba(37, 99, 235, 0.08);
+}
+
+.hero-top-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.hero-tag {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.hero-result-card h3 {
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+
+.coach-subtitle {
+  margin: 0;
+  color: #64748b;
+}
+
+.score-badge {
+  min-width: 170px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #eff6ff;
+  border: 1px solid #93c5fd;
+  text-align: right;
+}
+
+.score-label {
+  display: block;
+  font-size: 12px;
+  color: #475569;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.score-value {
+  font-size: 30px;
+  font-weight: 800;
+  color: #1d4ed8;
+}
+
+.small-score-badge {
+  background: #e0f2fe;
+  color: #0369a1;
+  font-weight: 800;
+  padding: 8px 12px;
+  border-radius: 999px;
+  min-width: 64px;
+  text-align: center;
+}
+
+.meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 14px;
+  color: #334155;
+}
+
+.reason-box,
+.tradeoff-box,
+.pricing-box {
+  margin-top: 14px;
+  padding: 14px;
+  border-radius: 12px;
+}
+
+.reason-box {
+  background: #f8fafc;
+  border: 1px solid #dbeafe;
+}
+
+.recommendation-box {
+  background: #eef6ff;
+  border: 1px solid #bfdbfe;
+}
+
+.tradeoff-box {
+  background: #fff7ed;
+  border: 1px solid #fdba74;
+}
+
+.pricing-box {
+  background: #ecfeff;
+  border: 1px solid #a5f3fc;
+}
+
+.reason-box h4,
+.tradeoff-box h4,
+.pricing-box h4,
+.subsection-title {
+  margin: 0 0 10px;
+  color: #0f172a;
+}
+
+.reason-box ul,
+.pricing-box ul {
+  margin: 0 0 0 18px;
+  padding: 0;
+}
+
+.tradeoff-box p {
+  margin: 0;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.coach-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.empty-state,
+.error-banner {
+  padding: 14px 16px;
+  border-radius: 12px;
+}
+
+.empty-state {
+  background: #fff7ed;
+  border: 1px solid #fdba74;
+}
+
+.error-banner {
+  background: #fee2e2;
+  color: #991b1b;
+  margin-bottom: 16px;
+  border: 1px solid #fca5a5;
+}
+
+@media (max-width: 900px) {
+  .stepper,
+  .form-grid,
+  .request-summary,
+  .preview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-top-row,
+  .coach-card-header,
+  .meta-row,
+  .button-row {
+    flex-direction: column;
+  }
+
+  .score-badge {
+    width: 100%;
+    text-align: left;
+  }
+}
